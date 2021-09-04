@@ -7,6 +7,8 @@ const loadData = async () => {
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`
 
+    inputID.value = null;
+
     const fetchData = await fetch(url);
     const res = await fetchData.json();
     displayUI(res);
